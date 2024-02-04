@@ -12,8 +12,9 @@
     flex: 1;
     background-color: #605BFF;
     color: #fff;
-    border-right: 180px solid #fff;
+    border-right: 180px solid #F8FAFF;
     /* border-top: 659px solid transparent; */
+    border-bottom: 659px solid transparent;
 }
 /* .left-half::before {
     content: '';
@@ -66,8 +67,37 @@
     cursor: pointer;
 }
 .logo img {
-    width: 70px;
+    width: 80.15px;
+    height: 80.15px;
+    top: 54.32px;
+    left: 61.03px;
+    color: #ffffff;
+
 }
+.logo {
+    position: relative;
+}
+
+.ellipse {
+    width: 80.15px;
+    height: 80.15px;
+    top: 54.32px;
+    left: 61.03px;
+    background: #FCFCFF;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.vector {
+    width: 82.82px;
+    height: 22.04px;
+    top: 83.71px;
+    left: 59.03px;
+    border-top: 6px solid #605BFF;
+    background: transparent;
+    position: absolute;
+}
+
 .right-half h1, .right-half h4 {
     margin-top: 0;
 }
