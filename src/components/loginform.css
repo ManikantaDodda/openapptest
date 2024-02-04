@@ -13,7 +13,7 @@
     background-color: #605BFF;
     color: #fff;
     border-right: 180px solid #fff;
-    border-top: 659px solid transparent;
+    /* border-top: 659px solid transparent; */
 }
 /* .left-half::before {
     content: '';

@@ -35,7 +35,6 @@ function LoginForm(props) {
             <div className='left-half'>
                 <div className='logo'>
                     <img src={logo} alt="Logo" />
-                    <span>BASE</span>
                 </div>
                 <div className='title'>
                     <h1>BASE</h1>
