@@ -1,0 +1,123 @@
+/* Dashboard.css */
+
+.dashboard {
+    display: flex;
+  }
+ .main-content {
+    background-color: #F8FAFF;
+ }
+  
+  .sidebar {
+    background-color: #FFFFFF;
+    color: #030229;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navabar-items{
+    align-items: flex-start;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 42px;
+    height: 42px; /* Adjust the width as needed */
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 1.5rem;
+  }
+  
+  .nav-item {
+    margin-bottom: 23px;
+    text-decoration: none;
+    color: #9A9AA9;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .nav-item span {
+    margin-left: 10px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #F8FAFF;
+  }
+  
+  .profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .profile h3 {
+    margin-right: 880px;
+  }
+  .profile img {
+    width: 40px; /* Adjust the width as needed */
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .content {
+      padding: 10px;
+    }
+  }
+
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      align-items: flex-start; /* Align items to the left on smaller screens */
+    }
+  
+    .content {
+      padding: 10px;
+    }
+  
+    .profile {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  
+    .profile h4 {
+      margin-right: 0;
+    }
+  }
+  
+  /*  ls2 */
+  

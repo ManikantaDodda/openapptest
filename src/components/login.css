@@ -1,0 +1,27 @@
+.cover{
+    width: 100%;
+    height: 330px;
+    background: #000;
+    display: flex;
+  }
+  
+  .left-half{
+    width: calc( 50% - 40px) ;
+    height: 100%;
+    background: #ff005b;
+  }
+  
+  .right-half{
+    width: calc( 50% + 40px );
+    height: 100%;
+    background: #17274c;
+    border-left: 80px solid #ff005b;
+    border-bottom: 330px solid transparent;
+    box-sizing: border-box;
+  }
+  
+  .content{
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+  }
