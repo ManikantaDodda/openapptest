@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router';
 
 function LoginForm(props) {
     const navigate = useNavigate();
-    const [popupStyle, showPopup] = useState("hide");
+    // const [popupStyle, showPopup] = useState("hide");
 
     const onSuccess = res => {
         let tokenData = jwtDecode(res.credential);
@@ -26,8 +26,9 @@ function LoginForm(props) {
     }
 
     const popup = () => {
-        showPopup("login-popup")
-        setTimeout(() => showPopup("hide"), 3000)
+        // showPopup("login-popup")
+        // setTimeout(() => showPopup("hide"), 3000)
+        navigate('/dashboard');
     }
 
     return (
