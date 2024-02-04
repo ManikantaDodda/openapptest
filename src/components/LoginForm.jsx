@@ -66,7 +66,7 @@ function LoginForm(props) {
                     <div className="apple"> Sign In with Apple</div>
                 </div>
                 <div className='card'>
-                    <form>
+                    <form onSubmit={popup}>
                         <div className='form-input'>
                             <label>Email</label>
                             <input type="email" placeholder="username" required />
@@ -76,7 +76,7 @@ function LoginForm(props) {
                             <input type="password" placeholder="password" required />
                             <a href='#'>Forgot Password?</a>
                         </div>
-                        <button type='submit' className="login-btn" onClick={popup}>Login</button>
+                        <button type='submit' className="login-btn">Login</button>
                     </form>
                 </div>
                 <div className='last-content'>Don't have an Account? <a href='#'>Register Now</a></div>
