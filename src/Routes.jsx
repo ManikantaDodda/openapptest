@@ -14,10 +14,10 @@ const AppRoutes = () => {
       {/* Default Dashboard Route */}
       
       <Route path="/" element={<LoginForm />} />
-      <Route path="dashboard" element={<Dashboard />} />
+      <Route path="/upload" element={<Dashboard />} />
 
       {/* Upload Component Route */}
-      <Route path="/upload" element={<Upload />} />
+      <Route path="/uploads" element={<Upload />} />
 
       {/* 404 Route */}
       {/* <Route path="dr" element={<DragDropFile />} /> */}

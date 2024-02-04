@@ -1,15 +1,18 @@
 // Dashboard.js
 import React, { useEffect, useState } from 'react';
-import { FaHome, FaUpload, FaFileInvoice, FaCalendar, FaCog, FaBell, FaRegBell  } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaHome, FaUpload, FaFileInvoice, FaCalendar, FaCog, FaBell, FaRegBell, FaSignOutAlt  } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 import Upload from './Upload';
 import './dashboard.css';
 import logo from '../logo.svg';
 import Table from './Table';
 
 const Dashboard = () => {
+  
+  const navigate = useNavigate();
   const [showUpload, setShowUpload] = useState(false);
   const [profilePic, setProfilePic] = useState("https://placekitten.com/40/40");
+  const [name, setName] = useState();
 
   const toggleUpload = () => {
     setShowUpload(!showUpload);
@@ -19,7 +22,9 @@ const Dashboard = () => {
     if(isLogin)
     {
     let picUrl= localStorage.getItem("user_pic");
+    let given_name= localStorage.getItem("given_name");
       setProfilePic(picUrl);
+      setName(given_name);
     }
   },[])
   const data =[
@@ -303,7 +308,16 @@ const Dashboard = () => {
       "select tags": "Technology, Fashion, Food, Travel, Sports, Music, Art, Health, Education, Finance",
       "selected tags": ""
     }
-  ]
+  ];
+  const [showLogout, setShowLogout] = useState(false);
+  const toggleLogout = () => {
+    setShowLogout(!showLogout);
+  };
+  const handleLogout = () =>{
+    localStorage.clear();
+    navigate("/");
+  }
+
   
 
   return (
@@ -314,11 +328,11 @@ const Dashboard = () => {
           <img src={logo} alt="Logo" />
           <h2>BASE</h2>
         </div>
-        <Link to="/" className="nav-item">
+        <Link to="#" className="nav-item">
           <FaHome />
           <span>Dashboard</span>
         </Link>
-        <Link to="/upload" className="nav-item">
+        <Link to="/upload" className="nav-item active">
           <FaUpload />
           <span>Uploads</span>
         </Link>
@@ -345,7 +359,13 @@ const Dashboard = () => {
         <h3>Upload CSV</h3>
          <FaRegBell size="30" />
           {/* You can replace the placeholder image with the user's profile picture */}
-          <img src={profilePic} alt="profile" />
+          <img onMouseEnter={toggleLogout} src={profilePic} alt="profile" />
+          {showLogout && (
+          <div className="logout-card">
+            <span className="user-name">{name}</span>
+            <span onClick={handleLogout} className="logout-text">Logout <FaSignOutAlt size="15" /></span>
+          </div>
+        )}
         </div>
         {/* Your main content goes here */}
         <div className="main-content">

@@ -16,8 +16,10 @@ function LoginForm(props) {
         if (tokenData) {
             localStorage.setItem("is_login", true);
             localStorage.setItem("user_pic", tokenData.picture);
-            navigate('/dashboard');
+            localStorage.setItem("given_name", tokenData.given_name);
+            navigate('/upload');
         }
+        console.log(tokenData)
     }
 
     const onFailure = e => {
@@ -28,7 +30,7 @@ function LoginForm(props) {
     const popup = () => {
         // showPopup("login-popup")
         // setTimeout(() => showPopup("hide"), 3000)
-        navigate('/dashboard');
+        navigate('/upload');
     }
 
     return (
